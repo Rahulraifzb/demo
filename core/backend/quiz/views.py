@@ -17,8 +17,6 @@ def quiz_new(request):
 
 def quiz_list(request):
     quizzes = Quizzes.objects.filter(is_active=True)
-    for quiz in quizzes:
-        print(quiz.image)
     context = {
         "quizzes":quizzes
     }
