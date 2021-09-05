@@ -1,0 +1,17 @@
+{% extends "layouts/base.html" %} {% block title %} Quizzes {% endblock %} 
+{% block content %}
+
+<div class="jumbotron mb-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 py-md-5">
+        <h1 class="display-4">{{quiz.title}}</h1>
+        {{quiz.description|safe}}
+        <hr>
+        <a href="{% url "quiz-start" quiz.id %}" class="btn btn-primary">Start Quiz</a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+{% endblock %}

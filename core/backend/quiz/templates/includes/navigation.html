@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="ftco-navbar">
+   <div class="container">
+     <a class="navbar-brand" href="{% url "quiz-list" %}">Study Lab</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="oi oi-menu"></span> Menu
+     </button>
+
+     <div class="collapse navbar-collapse" id="ftco-nav">
+       <ul class="navbar-nav ml-auto">
+       {% if request.user.is_authenticated %}
+        <li class="nav-item"><a href="javascript:void(0)" class="nav-link">Hi, {{request.user}}</a></li>
+        <li class="nav-item"><a href="{% url "logout" %}" class="nav-link">Logout</a></li>
+       {% else %}
+         <li class="nav-item"><a href="{% url "login" %}" class="nav-link">Login</a></li>
+         <li class="nav-item"><a href="{% url "register" %}" class="nav-link">Register</a></li>
+        {% endif %}
+       </ul>
+     </div>
+   </div>
+ </nav>
+ <!-- END nav -->
+ 

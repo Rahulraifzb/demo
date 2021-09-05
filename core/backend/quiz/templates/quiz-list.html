@@ -1,0 +1,38 @@
+{% extends "layouts/base.html" %} 
+{% block title %} Quizzes {% endblock %} 
+{% block content %}
+
+<section class=" mt-5 bg-light">
+  <div class="container">
+    <div class="row d-flex">
+      {% for quiz in quizzes %}
+      <div class="col-lg-4 ftco-animate">
+        <div class="blog-entry">
+          <img
+            src="/media/{{quiz.image}}"
+            alt={{quiz.image}}
+            width="100%"
+            height="100%"
+          >
+          </a>
+          <div class="text d-block">
+            <h3 class="heading">
+              <a href="{% url 'quiz-detail' quiz.id %}">{{quiz.title}}</a>
+            </h3>
+            <p>
+              {{quiz.description|safe|truncatewords:9}}
+            </p>
+            <p>
+              <a href="{% url 'quiz-detail' quiz.id %}" class="btn btn-secondary py-2 px-3"
+                >Read more</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

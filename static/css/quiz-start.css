@@ -1,0 +1,51 @@
+.quiz-result .icon i{
+    font-size: 100px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+section .option_list .option:hover{
+    color: #004085;
+    background: #cce5ff;
+    border-color: #b8daff;
+    cursor: pointer;
+}
+
+.option_list .option .icon.tick{
+    border-color: #23903c;
+    color: #239023;
+    background:#ddedda;
+}
+.option_list .option .icon.cross{
+    color: #a42834;
+    background: #f8d7da;
+    border-color:#a4283a;
+}
+
+.option_list .option.correct{
+    color:#155724;
+    background: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.option_list .option.incorrect{
+    color:#721c24;
+    background: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.option_list .option.disabled{
+    pointer-events: none;
+}
+
+.option_list .option .icon{
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    line-height: 24px;
+    pointer-events: none;
+}
+

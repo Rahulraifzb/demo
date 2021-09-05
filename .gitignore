@@ -1,0 +1,31 @@
+### Code ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+
+# Environments
+.env
+.venv*
+env/
+venv/
+
+# End of https://www.toptal.com/developers/gitignore/api/django,virtualenv,python,code
+core/settings_local.py
+.vscode/launch.json
+
+
+staticfiles
