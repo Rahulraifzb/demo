@@ -13,7 +13,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def quiz_new(request):
-    return HttpResponse("Hello world")
+    return render(request,"quiz_new.html")
 
 def quiz_list(request):
     quizzes = Quizzes.objects.filter(is_active=True)
