@@ -8,9 +8,12 @@ from core.backend.quiz.models import Answer, QuizEnrolledUser, QuizUserAnswer, Q
 from django.shortcuts import get_object_or_404, render
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 
 
 # Create your views here.
+def quiz_new(request):
+    return HttpResponse("Hello world")
 
 def quiz_list(request):
     quizzes = Quizzes.objects.filter(is_active=True)
